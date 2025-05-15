@@ -31,7 +31,9 @@
               "node_modules/primeflex/primeflex.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "public/tagcanvas.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,7 +93,9 @@
               "node_modules/primeflex/primeflex.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "public/tagcanvas.min.js"
+            ]
           }
         }
       }

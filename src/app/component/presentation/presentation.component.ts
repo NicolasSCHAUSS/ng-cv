@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Experience } from '../../model/experience';
+import { HttpClient } from '@angular/common/http';
+
+//Cloud word 
+declare const TagCanvas: any;
 
 @Component({
   selector: 'app-presentation',
@@ -7,13 +11,12 @@ import { Experience } from '../../model/experience';
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.css'
 })
-export class PresentationComponent {
+export class PresentationComponent implements AfterViewInit {
 
   protected title: string
   protected subtitle: string
   protected nationality: string
   protected language: string
-  protected technology: Array<string> = []
   protected timeline: Array<Experience> = []
 
   constructor() {
@@ -21,6 +24,27 @@ export class PresentationComponent {
     this.subtitle = "10 ans d'expérience"
     this.nationality = "Français"
     this.language = "Anglais : Lu, écrit et parlé"
-    this.technology.push(JSON.parse("/assets/technology.json").tools)
+  }
+
+  ngAfterViewInit(): void {
+    try {
+      TagCanvas.Start('myCanvas', 'tags', {
+        textFont: null,
+        textColour: null,
+        weight: true,
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.05,
+        stretchY: 0.5,
+        zoom: 1.8,
+        wheelZoom: false,
+        noSelect: true,
+        imageMode: "both",
+        imagePosition: "top",
+        imageScale: 0.1
+      })
+    } catch (e) {
+      console.error("TagCanvas init error", e)
+    }
   }
 }
