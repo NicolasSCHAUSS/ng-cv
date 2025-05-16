@@ -30,18 +30,22 @@ export class PresentationComponent implements AfterViewInit {
     try {
       TagCanvas.Start('myCanvas', 'tags', {
         textFont: null,
-        textColour: null,
+        textColour: "#a8a8a8",
+        textHeight: 15,
         weight: true,
         reverse: true,
         depth: 0.8,
         maxSpeed: 0.05,
-        stretchY: 0.5,
+        stretchY: 0.4,
         zoom: 1.8,
         wheelZoom: false,
-        noSelect: true,
+        noSelect: false,
+        outlineMethod: "colour",
+        outlineColour: "#ffffff",
+        clickToFront: 500,
         imageMode: "both",
-        imagePosition: "top",
-        imageScale: 0.1
+        imagePosition: "bottom",
+        imageScale: 0.04,
       })
     } catch (e) {
       console.error("TagCanvas init error", e)
