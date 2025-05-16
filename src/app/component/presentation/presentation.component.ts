@@ -31,13 +31,13 @@ export class PresentationComponent implements AfterViewInit {
       TagCanvas.Start('myCanvas', 'tags', {
         textFont: null,
         textColour: "#a8a8a8",
-        textHeight: 15,
+        textHeight: 18,
         weight: true,
         reverse: true,
         depth: 0.8,
         maxSpeed: 0.05,
-        stretchY: 0.4,
-        zoom: 1.8,
+        stretchY: 1,
+        zoom: 1,
         wheelZoom: false,
         noSelect: false,
         outlineMethod: "colour",
@@ -45,7 +45,7 @@ export class PresentationComponent implements AfterViewInit {
         clickToFront: 500,
         imageMode: "both",
         imagePosition: "bottom",
-        imageScale: 0.04,
+        imageScale: 0.08,
       })
     } catch (e) {
       console.error("TagCanvas init error", e)
