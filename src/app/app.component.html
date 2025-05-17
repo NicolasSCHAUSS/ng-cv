@@ -1,6 +1,16 @@
 <p-menubar [model]="items">
   <ng-template #end>
-    <p-avatar image="assets/nschauss-cv.png" shape="circle"/>
+    <p-avatar image="assets/nschauss-cv.png" shape="circle" />
   </ng-template>
 </p-menubar>
 <router-outlet></router-outlet>
+<p-divider />
+<footer class="flex flex-column align-items-center">
+  <div class="flex align-items-center justify-content-around w-6">
+    <a href="https://www.linkedin.com/in/nicolas-schauss-637bb2206/" target="_blank"><i class="pi pi-linkedin"></i></a>
+    <a href="https://discord.com/users/ixionfire" target="_blank"><i class="pi pi-discord"></i></a>
+    <a href="https://www.facebook.com/ixionfire" target="_blank"><i class="pi pi-facebook"></i></a>
+    <a href="mailto:nicolas.schauss@gmail.com"><i class="pi pi-envelope"></i></a>
+  </div>
+  <p class="text-400 font-italic text-xs">© 2025 Nicolas SCHAUSS. Tous droits réservés.</p>
+</footer>
