@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Experience } from '../../model/experience';
-import { HttpClient } from '@angular/common/http';
 
 //Cloud word 
 declare const TagCanvas: any;
@@ -12,6 +11,8 @@ declare const TagCanvas: any;
   styleUrl: './presentation.component.css'
 })
 export class PresentationComponent implements AfterViewInit {
+
+  protected isTablet: boolean = false;
 
   protected title: string
   protected subtitle: string
@@ -35,11 +36,10 @@ export class PresentationComponent implements AfterViewInit {
         weight: true,
         reverse: true,
         depth: 0.8,
-        maxSpeed: 0.05,
-        stretchY: 1,
+        maxSpeed: 0.1,
         zoom: 1,
         wheelZoom: false,
-        noSelect: false,
+        noSelect: true,
         outlineMethod: "colour",
         outlineColour: "#ffffff",
         clickToFront: 500,
