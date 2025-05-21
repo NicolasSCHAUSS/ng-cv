@@ -1,6 +1,9 @@
-<p-menubar [model]="items">
+<p-menubar class="fixed top-0 z-5 w-12" [model]="items">
   <ng-template #end>
-    <p-avatar image="assets/nschauss-cv.png" shape="circle" />
+    <div class="flex justify-content-center align-items-center">
+      <span class="grey mr-2">Nicolas SCHAUSS</span>
+      <p-avatar image="assets/nschauss-cv.png" shape="circle" />
+    </div>
   </ng-template>
 </p-menubar>
 <router-outlet></router-outlet>

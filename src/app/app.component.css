@@ -5,3 +5,21 @@ a:link {
 a:visited {
     color: var(--p-surface-600);
 }
+
+p-menubar {
+    font-family: 'Neuropolitical', sans-serif;
+}
+
+.grey {
+    color: var(--p-surface-500);
+}
+
+p-divider {
+    position: relative;
+    top: 3rem;
+}
+
+footer {
+    position: relative;
+    top: 3rem;
+}

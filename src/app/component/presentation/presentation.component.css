@@ -27,3 +27,12 @@
         display: inline;
     }
 }
+
+.text-400 {
+    font-family: 'Neuropolitical', sans-serif;
+}
+
+.main {
+    position: relative;
+    top: 3rem;
+}

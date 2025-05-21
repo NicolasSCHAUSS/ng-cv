@@ -1,0 +1,136 @@
+@media screen and (max-width: 1024px) {
+    .sector {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        font-size: 0.8rem;
+    }
+
+    .header>div>div {
+        display: inline;
+        flex-direction: column;
+    }
+
+    .accordion {
+        font-size: small;
+    }
+
+    .experience-info {
+        font-size: 13px;
+    }
+
+    .col-inline {
+        flex-direction: column;
+    }
+
+    .sector {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 425px) {
+
+    .grey {
+        padding-left: 0.2rem !important;
+        padding-right: 0.2rem !important;
+    }
+
+    p-accordion {
+        padding-left: 1vw !important;
+        padding-right: 1vw !important;
+    }
+
+    .accordion {
+        font-size: 0.8rem;
+    }
+
+    .main-column {
+        display: grid !important;
+    }
+
+    .experience-info {
+        font-size: 11px;
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+        padding-top: 0rem !important;
+    }
+
+    .info-grid {
+        display: grid !important;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 425px) and (min-width: 320px) {
+
+    .grey {
+        padding-left: 0.2rem !important;
+        padding-right: 0.2rem !important;
+    }
+
+    p-accordion {
+        padding-left: 1vw !important;
+        padding-right: 1vw !important;
+    }
+
+    .accordion {
+        width: 90vw;
+        font-size: 0.6rem;
+    }
+
+    .experience-info {
+        font-size: 8px;
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+        padding-top: 0rem !important;
+    }
+
+    .main-column {
+        display: grid !important;
+    }
+
+    .info-grid {
+        display: grid !important;
+        justify-items: center;
+    }
+}
+
+.header {
+    top: 3rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--p-menubar-border-color);
+}
+
+.experience {
+    padding-top: 6.8rem;
+}
+
+.experience-info {
+    position: relative;
+    top: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+}
+
+.accordion:focus-visible {
+    outline-color: var(--p-menubar-border-color);
+}
+
+.grey {
+    color: var(--p-surface-500);
+}
+
+.col-padding-bottom {
+    padding-bottom: 0rem !important;
+}
+
+.col-padding-top {
+    padding-top: 0rem !important;
+}

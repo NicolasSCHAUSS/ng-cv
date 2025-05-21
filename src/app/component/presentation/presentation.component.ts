@@ -12,8 +12,6 @@ declare const TagCanvas: any;
 })
 export class PresentationComponent implements AfterViewInit {
 
-  protected isTablet: boolean = false;
-
   protected title: string
   protected subtitle: string
   protected nationality: string
@@ -30,7 +28,7 @@ export class PresentationComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     try {
       TagCanvas.Start('myCanvas', 'tags', {
-        textFont: null,
+        textFont: "Jost, sans-serif",
         textColour: "#a8a8a8",
         textHeight: 18,
         weight: true,
