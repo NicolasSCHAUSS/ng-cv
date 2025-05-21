@@ -6,6 +6,10 @@ a:visited {
     color: var(--p-surface-600);
 }
 
+a:hover {
+    color: var(--p-surface);
+}
+
 p-menubar {
     font-family: 'Neuropolitical', sans-serif;
 }

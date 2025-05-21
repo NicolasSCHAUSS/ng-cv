@@ -1,0 +1,22 @@
+.offset {
+    position: relative;
+    top: 4rem;
+    justify-self: center;
+}
+
+a:link {
+    color: var(--p-surface-600);
+    font-weight: bold;
+}
+
+a:visited {
+    color: var(--p-surface-600);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--p-surface);
+}
