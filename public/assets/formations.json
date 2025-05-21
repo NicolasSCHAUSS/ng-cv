@@ -1,0 +1,58 @@
+[
+    {
+        "institution": "Aelion",
+        "year": 2025,
+        "title": "Formation Terraform / Kubernetes / Docker / AWS",
+        "town": "Blagnac",
+        "icon": "pi-briefcase"
+    },
+    {
+        "institution": "Angular Training",
+        "year": 2024,
+        "title": "Certification Angular Developer",
+        "town": "Paris",
+        "icon": "pi-briefcase"
+    },
+    {
+        "institution": "Diginamic",
+        "year": 2018,
+        "title": "Développeur full stack (Java, Spring Boot, TypeScript, Angular)",
+        "town": "Montpellier",
+        "icon": "pi-briefcase"
+    },
+    {
+        "institution": "IMERIR",
+        "year": 2011,
+        "title": "Master chef de projet en informatique et robotique",
+        "town": "Perpignan",
+        "icon": "pi-graduation-cap"
+    },
+    {
+        "institution": "Aalborg University",
+        "year": 2010,
+        "title": "License en produit et procédure de production",
+        "town": "Aalborg - Danemark",
+        "icon": "pi-graduation-cap"
+    },
+    {
+        "institution": "IUT Paul Sabatier",
+        "year": 2008,
+        "title": "Diplôme universitaire génie mécanique et productique",
+        "town": "Tarbes",
+        "icon": "pi-graduation-cap"
+    },
+    {
+        "institution": "Lycée Jules Fil",
+        "year": 2006,
+        "title": "Baccalauréat Scientifique / Science de l'ingénieur",
+        "town": "Carcassonne",
+        "icon": "pi-graduation-cap"
+    },
+    {
+        "institution": "CODIS Aude",
+        "year": 2005,
+        "title": "Chef d'équipe sur aérodrome de la sécurité de civil",
+        "town": "Valabre",
+        "icon": "pi-warehouse"
+    }
+]

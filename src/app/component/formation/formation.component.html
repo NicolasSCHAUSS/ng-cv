@@ -1,1 +1,14 @@
-<p>formation works!</p>
+<p-timeline [value]="formations" align="left" class="offset">
+    <ng-template #marker let-formation>
+        <span class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm">
+            <i class="pi {{formation.icon}} grey"></i>
+        </span>
+    </ng-template>
+    <ng-template #content let-formation>
+        <div>
+            <span class="font-semibold">{{formation.year}}</span>
+            - <span class="font-semibold grey">{{formation.institution}} ({{formation.town}})</span>
+        </div>
+        <p>{{formation.title}}</p>
+    </ng-template>
+</p-timeline>
