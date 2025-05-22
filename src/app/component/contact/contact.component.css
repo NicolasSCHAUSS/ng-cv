@@ -5,7 +5,7 @@
 }
 
 a:link {
-    color: var(--p-surface-600);
+    color: var(--p-surface-400);
     font-weight: bold;
 }
 
@@ -19,4 +19,8 @@ a {
 
 a:hover {
     color: var(--p-surface);
+}
+
+.monologue {
+    color: var(--p-surface-400);
 }
