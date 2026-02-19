@@ -1,71 +1,111 @@
 <div class="fixed z-4 border-round w-full header surface-ground">
-    <div class="flex border-round pl-5 pr-5 m-3 align-items-center font-semibold grey">
-        <span class="flex w-2 justify-content-center">Entreprise</span>
-        <p-divider layout="vertical" />
-        <div class="flex w-7 justify-content-between">
-            <span>Client - Poste</span>
-            <span>Secteur</span>
-        </div>
-        <span class="flex w-3 justify-content-center">Années</span>
-        <span class="flex justify-content-end ml-1">Info</span>
+  <div
+    class="flex border-round pl-5 pr-5 m-3 align-items-center font-semibold grey"
+  >
+    <span class="flex w-2 justify-content-center">Entreprise</span>
+    <p-divider layout="vertical" />
+    <div class="flex w-7 justify-content-between">
+      <span>Client - Poste</span>
+      <span>Secteur</span>
     </div>
+    <span class="flex w-3 justify-content-center">Années</span>
+    <span class="flex justify-content-end ml-1">Info</span>
+  </div>
 </div>
 <div class="experience">
-    @for(experience of experiences; track $index) {
+  @for (experience of experiences; track $index) {
     <p-accordion class="flex border-round pt-3 pl-5 pr-5">
-        <p-accordion-panel class="border-round" value="{{$index}}">
-            <p-accordion-header class="flex accordion">
-                <div class="flex w-2 text-center justify-content-center">
-                    {{experience.company}}
-                </div>
-                <p-divider layout="vertical" />
-                <div class="flex w-7 justify-content-between main-column">
-                    <span>{{experience.client}} - {{experience.position}}</span>
-                    <span class="sector">{{experience.sector}}</span>
-                </div>
-                <span class="flex w-3 justify-content-center ml-1 mr-1 text-center">{{experience.start}} -
-                    {{experience.end}}</span>
-            </p-accordion-header>
-            <p-accordion-content class="flex flex-column">
-                <div class="flex grid surface-ground experience-info">
-                    <span class="flex col-4 align-items-center justify-content-center col-inline">
-                        <span class="font-semibold mr-1">Durée :</span>
-                        {{experience.duration | duration}}
-                    </span>
-                    <span class="flex col-4 align-items-center justify-content-center col-inline">
-                        <span class="font-semibold mr-1">Equipe :</span>
-                        {{experience.teamSize}} personnes
-                    </span>
-                    <span class="flex col-4 align-items-center justify-content-center info-grid col-inline">
-                        <span class="font-semibold mr-1">Management :</span>
-                        {{experience.managementType}}
-                    </span>
-                    <span class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom">
-                        Description :</span>
-                    <span class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom">
-                        Responsabilités :</span>
-                    <span class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom">
-                        Technologies :</span>
-                    <span class="flex col-4 align-items-start justify-content-center col-padding-top text-justify">
-                        <p>{{experience.projectDescription}}</p>
-                    </span>
-                    <span class="flex col-4 align-items-start justify-content-center col-padding-top">
-                        <ul>
-                            @for(responsability of experience.projectResponsabilities; track $index) {
-                            <li>{{responsability}}</li>
-                            }
-                        </ul>
-                    </span>
-                    <span class="flex col-4 align-items-start justify-content-center col-padding-top">
-                        <ul>
-                            @for(skill of experience.projectSkills; track $index) {
-                            <li>{{skill}}</li>
-                            }
-                        </ul>
-                    </span>
-                </div>
-            </p-accordion-content>
-        </p-accordion-panel>
+      <p-accordion-panel class="border-round" value="{{ $index }}">
+        <p-accordion-header class="flex accordion">
+          <div class="flex w-2 text-center justify-content-center">
+            {{ experience.company }}
+          </div>
+          <p-divider layout="vertical" />
+          <div class="flex w-7 justify-content-between main-column">
+            <span>{{ experience.client }} - {{ experience.position }}</span>
+            <span class="sector">{{ experience.sector }}</span>
+          </div>
+          <span class="flex w-3 justify-content-center ml-1 mr-1 text-center"
+            >{{ experience.start }}
+            @if (experience.end) {
+              - {{ experience.end }}
+            } @else {
+              - En cours
+            }
+          </span>
+        </p-accordion-header>
+        <p-accordion-content class="flex flex-column">
+          <div class="flex grid surface-ground experience-info">
+            <span
+              class="flex col-4 align-items-center justify-content-center col-inline"
+            >
+              <span class="font-semibold mr-1">Durée :</span>
+              @if (experience.duration) {
+                {{ experience.duration | duration }}
+              } @else {
+                En cours
+              }
+            </span>
+            <span
+              class="flex col-4 align-items-center justify-content-center col-inline"
+            >
+              <span class="font-semibold mr-1">Equipe :</span>
+              @if (experience.teamSize) {
+                {{ experience.teamSize }} personnes
+              } @else {
+                Au besoin
+              }
+            </span>
+            <span
+              class="flex col-4 align-items-center justify-content-center info-grid col-inline"
+            >
+              <span class="font-semibold mr-1">Management :</span>
+              {{ experience.managementType }}
+            </span>
+            <span
+              class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
+            >
+              Description :</span
+            >
+            <span
+              class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
+            >
+              Responsabilités :</span
+            >
+            <span
+              class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
+            >
+              Technologies :</span
+            >
+            <span
+              class="flex col-4 align-items-start justify-content-center col-padding-top text-justify"
+            >
+              <p>{{ experience.projectDescription }}</p>
+            </span>
+            <span
+              class="flex col-4 align-items-start justify-content-center col-padding-top"
+            >
+              <ul>
+                @for (
+                  responsability of experience.projectResponsabilities;
+                  track $index
+                ) {
+                  <li>{{ responsability }}</li>
+                }
+              </ul>
+            </span>
+            <span
+              class="flex col-4 align-items-start justify-content-center col-padding-top"
+            >
+              <ul>
+                @for (skill of experience.projectSkills; track $index) {
+                  <li>{{ skill }}</li>
+                }
+              </ul>
+            </span>
+          </div>
+        </p-accordion-content>
+      </p-accordion-panel>
     </p-accordion>
-    }
+  }
 </div>

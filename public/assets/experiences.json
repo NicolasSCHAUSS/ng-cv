@@ -1,5 +1,40 @@
 [
     {
+        "company": "Nicolas SCHAUSS",
+        "position": "Ingénieur Web Full stack",
+        "client": "Auto-entrepreneur",
+        "start": 2025,
+        "end": null,
+        "duration": null,
+        "sector": "Suivant besoin",
+        "projectDescription": "Etudes, conseils, conceptions, développements et livraisons d'application web multidisciplinaire en intégration continue.",
+        "teamSize": null,
+        "managementType": "Agile",
+        "projectResponsabilities": [
+            "Recueil des besoins et editions de devis",
+            "Organisation des fonctionnalités et évolutions par itération Agile",
+            "Conception et développement des fonctionnalités spécifiées par le client/responsable",
+            "Démonstration de l’évolution des fonctionnalités",
+            "Livraison et suivi de version applicative",
+            "Validation et prise en compte des retours client/utilisateur"
+        ],
+        "projectSkills": [
+            "Docker",
+            "Node",
+            "TypeScript",
+            "Angular",
+            "JAVA/J2EE",
+            "Spring",
+            "Thymeleaf",
+            "Lombok",
+            "Jakarta",
+            "Windsurf",
+            "GitHub",
+            "Claude.ai",
+            "Bash"
+        ]
+    },
+    {
         "company": "WebAtrio",
         "position": "Développeur front Angular",
         "client": "Barnes",
@@ -274,5 +309,67 @@
             "SFTP",
             "SSH"
         ]
+    },
+    {
+        "company": "IMERIR",
+        "position": "Etudiant Eramsus",
+        "client": "Aalborg university",
+        "start": 2010,
+        "end": 2011,
+        "duration": "0000-06-00",
+        "sector": "Produits, processus et production",
+        "projectDescription": "Projet Little Helper, d'industrialisation robotique par la collaboration du pôle production de l'université d'Aalborg et l'école d'ingénieur IMERIR lors du programme ERASMUS.",
+        "teamSize": 5,
+        "managementType": "Licence europpéenne (BAC+3)",
+        "projectResponsabilities": [
+            "Mise en place d'une plateforme de distribution de tâches industrielles robotisées", 
+            "Conception et développement d'un banc de test en situation réel",
+            "Gestion des exécutions des tâches d'industrialisation effectuées via agents robotisés autonomes.",
+            "Développements algorithmes de gestion des tâches/robots de production en temps réel"
+        ],
+        "projectSkills": [
+            "Java/J2EE",
+            "JADE Agent",
+            "Swing",
+            "mySql",
+            "PHP",
+            "Html",
+            "JavaScript",
+            "XML",
+            "Bash",
+            "SVN",
+            "SFTP",
+            "SSH"
+        ]
+    },
+    {
+        "company": "CODIS Aude",
+        "position": "Chef d'équipe Pélicandrome",
+        "client": "Sécurité Civile",
+        "start": 2006,
+        "end": 2012,
+        "duration": "0006-00-00",
+        "sector": "Pompier volontaire saisonnier",
+        "projectDescription": "Lutte contre les incendis et feux de forêt depuis l'aéroport de Carcassonne.",
+        "teamSize": 18,
+        "managementType": "ESASC - Valabre (Formation Avril 2010)",
+        "projectResponsabilities": [
+            	"Responsable de l’administration",
+                "Communications radios et édition de rapport journalier",
+                "Gestion des équipes du pélicandrome de Carcassonne",
+                "Maintenance et vérification de l’équipement du pélicandrome",
+                "Accueil et remplissage en retardant des avions de lutte contre les feux de forêt",
+                "Encadrement de règles de vie au sein des équipes sur site (mécaniciens, pilotes, pompiers)"
+
+        ],
+        "projectSkills": [
+            "Bureautique",
+            "Communications radios",
+            "Gestion d'équipes",
+            "Maintenance équipement",
+            "Gestes de sécurité",
+            "Gestions des incidents"
+        ]
     }
+
 ]
