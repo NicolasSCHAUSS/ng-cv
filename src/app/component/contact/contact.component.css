@@ -1,26 +1,46 @@
 .offset {
-    position: relative;
-    top: 4rem;
-    justify-self: center;
+  position: relative;
+  top: 4rem;
+  justify-self: center;
 }
 
 a:link {
-    color: var(--p-surface-400);
-    font-weight: bold;
+  color: var(--p-surface-400);
+  font-weight: bold;
 }
 
 a:visited {
-    color: var(--p-surface-600);
+  color: var(--p-surface-600);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    color: var(--p-surface);
+  color: var(--p-surface);
 }
 
 .monologue {
-    color: var(--p-surface-400);
+  color: var(--p-surface-400);
+}
+
+.qr-code-container {
+  display: inline-block;
+  padding: 1rem;
+  background: var(--p-surface-0);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.qr-code-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.qr-code-image {
+  border-radius: 0.5rem;
 }
