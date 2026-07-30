@@ -1,7 +1,10 @@
 <p-menubar class="fixed top-0 z-5 w-12" [model]="items">
+  <ng-template #start>
+    <p-selectButton [options]="locales" [(ngModel)]="selectedLocale" (onChange)="changeLanguage($event.value)" optionLabel="label" optionValue="value"></p-selectButton>
+  </ng-template>
   <ng-template #end>
     <div class="flex justify-content-center align-items-center">
-      <span class="grey mr-2">Nicolas SCHAUSS</span>
+      <span class="grey mr-2">{{ 'app.name' | translate }}</span>
       <p-avatar image="assets/nschauss-cv.png" shape="circle" />
     </div>
   </ng-template>
@@ -10,10 +13,22 @@
 <p-divider />
 <footer class="flex flex-column align-items-center">
   <div class="flex align-items-center justify-content-around w-6">
-    <a href="https://www.linkedin.com/in/nicolas-schauss-637bb2206/" target="_blank"><i class="pi pi-linkedin"></i></a>
-    <a href="https://discord.com/users/ixionfire" target="_blank"><i class="pi pi-discord"></i></a>
-    <a href="https://www.facebook.com/ixionfire" target="_blank"><i class="pi pi-facebook"></i></a>
-    <a href="mailto:nicolas.schauss@gmail.com"><i class="pi pi-envelope"></i></a>
+    <a
+      href="https://www.linkedin.com/in/nicolas-schauss-637bb2206/"
+      target="_blank"
+      ><i class="pi pi-linkedin"></i
+    ></a>
+    <a href="https://discord.com/users/ixionfire" target="_blank"
+      ><i class="pi pi-discord"></i
+    ></a>
+    <a href="https://www.facebook.com/ixionfire" target="_blank"
+      ><i class="pi pi-facebook"></i
+    ></a>
+    <a href="mailto:nicolas.schauss@gmail.com"
+      ><i class="pi pi-envelope"></i
+    ></a>
   </div>
-  <p class="text-300 font-italic text-xs">© 2025 Nicolas SCHAUSS. Tous droits réservés.</p>
+  <p class="text-300 font-italic text-xs">
+    {{ 'app.copyright' | translate }}
+  </p>
 </footer>

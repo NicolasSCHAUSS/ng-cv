@@ -1,13 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { TranslationService } from '../service/translation.service';
 
 @Pipe({
   name: 'duration'
 })
 export class DurationPipe implements PipeTransform {
+  constructor(private translationService: TranslationService) {}
 
   transform(value: string): string {
     if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
-      return 'error duration pattern';
+      return this.translationService.translateSync('experience.error');
     }
 
     const [yearStr, monthStr, dayStr] = value.split('-');
@@ -18,26 +20,29 @@ export class DurationPipe implements PipeTransform {
     const parts: string[] = [];
 
     if (years > 0) {
-      parts.push(`${years} ${years > 1 ? 'ans' : 'an'}`);
+      const yearKey = years > 1 ? 'experience.duration.years' : 'experience.duration.year';
+      parts.push(`${years} ${this.translationService.translateSync(yearKey)}`);
     }
     if (months > 0) {
-      parts.push(`${months} mois`);
+      const monthKey = months > 1 ? 'experience.duration.months' : 'experience.duration.month';
+      parts.push(`${months} ${this.translationService.translateSync(monthKey)}`);
     }
     if (days > 0) {
-      parts.push(`${days} ${days > 1 ? 'jours' : 'jour'}`);
+      const dayKey = days > 1 ? 'experience.duration.days' : 'experience.duration.day';
+      parts.push(`${days} ${this.translationService.translateSync(dayKey)}`);
     }
 
     if (parts.length > 1) {
       //append comma between each value except the last one
       for (let i = 0; i <= parts.length - 1; i++) {
         if (parts.length == 2) {
-          parts[i + 1] = ' et ' + parts[i + 1];
+          parts[i + 1] = this.translationService.translateSync('experience.duration.and') + parts[i + 1];
           break;
         }
         else if (i == parts.length - 1)
-          parts[i] = ' et ' + parts[i];
+          parts[i] = this.translationService.translateSync('experience.duration.and') + parts[i];
         else
-          parts[i] += ', ';
+          parts[i] += this.translationService.translateSync('experience.duration.comma');
       }
     }
 

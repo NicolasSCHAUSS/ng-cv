@@ -1,0 +1,97 @@
+{
+  "app": {
+    "title": "SCHAUSS Nicolas",
+    "name": "Nicolas SCHAUSS",
+    "copyright": "© 2025 Nicolas SCHAUSS. Tutti i diritti riservati."
+  },
+  "menu": {
+    "presentation": "Presentazione",
+    "experience": "Esperienze",
+    "formation": "Formazione",
+    "contact": "Contatto",
+    "price": "Prezzi"
+  },
+  "presentation": {
+    "title": "Chi sono?",
+    "section1": "Con un genuino interesse per le nuove tecnologie, mi distinguisho per una visione innovativa nel miglioramento degli strumenti e dei processi di lavoro, in particolare nel contesto della transizione digitale francese.",
+    "section2": "Il mio obiettivo è creare soluzioni tecniche di alto valore, senza mai perdere di vista l'umano dietro allo schermo.",
+    "section3_title": "Un percorso atipico, una passione costante",
+    "section3_part1": "Con un solido background in ingegneria, robotica e informatica, ho costruito il mio profilo su basi tecniche variegate: ingegneria meccanica, gestione della produzione, sviluppo web e cloud computing.",
+    "section3_part2": "Dall'Istituto Mediterraneo di Studi e Ricerca in Robotica e Informatica di Perpignano a una recente certificazione come sviluppatore Angular confermato, ho sempre cercato di far evolvere le mie competenze, spinto da una curiosità insaziabile e un vero gusto per la sfida.",
+    "section4_title": "Uno sviluppatore... e un geek orgoglioso!",
+    "section4_part1": "Sono uno sviluppatore full stack di 37 anni, ma anche un appassionato di cultura geek. Se non sto codificando o sperimentando un nuovo framework, probabilmente mi troverete a giocare a un gioco indie, a guardare una serie di fantascienza in marathon o a ridisegnare il mondo intorno a un caffè parlando di musica, cinema o evoluzione dell'IA.",
+    "section4_part2": "Il mio approccio allo sviluppo è profondamente umano: amo collaborare, scambiare, imparare e trasmettere.",
+    "section5_title": "Dalla progettazione al deployment: una visione a 360°",
+    "section5_part1": "Specializzato in stack tecnologici come Java/Spring Boot, Angular e TypeScript, oggi integro la mia esperienza con forti competenze DevOps (Docker, Kubernetes, AWS).",
+    "section5_part2": "Il mio obiettivo? Essere in grado di progettare un'applicazione dalla A alla Z, dal front-end al deployment nel cloud, mantenendo sempre una mentalità agile e orientata all'utente.",
+    "technologies_title": "Tecnologie e strumenti"
+  },
+  "experience": {
+    "header": {
+      "company": "Azienda",
+      "client_position": "Cliente - Ruolo",
+      "sector": "Settore",
+      "years": "Anni",
+      "info": "Info"
+    },
+    "info": {
+      "duration": "Durata:",
+      "team": "Team:",
+      "management": "Gestione:",
+      "description": "Descrizione:",
+      "actions": "Azioni:",
+      "technologies": "Tecnologie:"
+    },
+    "duration": {
+      "current": "In corso",
+      "as_needed": "Secondo necessità",
+      "people": "persone",
+      "year": "anno",
+      "years": "anni",
+      "month": "mese",
+      "months": "mesi",
+      "day": "giorno",
+      "days": "giorni",
+      "and": " e ",
+      "comma": ", "
+    },
+    "error": "modello di durata errato"
+  },
+  "contact": {
+    "title": "Hai una domanda, un'opportunità professionale da offrire o semplicemente vuoi mettiti in contatto?",
+    "subtitle": "Non esitare a contattarmi tramite questi link:",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "facebook": "Facebook",
+    "discord": "Discord",
+    "qr_tooltip": "Accedi al portfolio",
+    "monologue_intro": "E come diceva",
+    "monologue_name": "Otis",
+    "monologue_question": "È una buona situazione, questa, scriba?",
+    "monologue": "Ma, sa, io non credo che ci siano situazioni buone o cattive. Io, se dovessi riassumere la mia vita oggi con voi, direi che prima di tutto ci sono gli incontri, persone che mi hanno teso la mano, forse in un momento in cui non potevo, quando ero solo a casa mia. E è curioso dire che i casi, gli incontri forgianto un destino... Perché quando si ha la passione per una cosa, quando si ha il gusto di far bene le cose, il bel gesto, a volte non si trova l'interlocutore di fronte, direi, lo specchio che ti aiuta ad andare avanti. Allora non è il mio caso, come dicevo prima, perché io al contrario, ho potuto; e dico grazie alla vita, le dico grazie, canto la vita, ballo la vita... Non sono che amore! E alla fine, quando molta gente oggi mi dice: \"Ma come fai ad avere questa umanità?\" Ecco, io rispondo loro molto semplicemente, gli dico che è questo gusto per l'amore, questo gusto che mi ha spinto oggi a intraprendere una costruzione meccanica, ma domani, chissà, forse semplicemente a mettermi al servizio della comunità, a donare, a donare me stesso...",
+    "source": "Fonte: Asterix e Obelix - Missione Cleopatra"
+  },
+  "price": {
+    "per_hour": "/Ora"
+  },
+  "sectors": {
+    "following_needs": "Secondo necessità",
+    "real_estate": "Immobiliare",
+    "insurance": "Assicurazioni, Mutua",
+    "health": "Sanità",
+    "aeronautics": "Aeronautica",
+    "banking": "Banca, Contabilità",
+    "education": "Istruzione",
+    "quality": "Aeronautica, Qualità",
+    "civil_security": "Protezione Civile"
+  },
+  "management_types": {
+    "agile": "Agile",
+    "agile_scrum": "Scrum Agile",
+    "lean": "Lean",
+    "esasc": "ESASC - Valabre (Formazione Aprile 2010)"
+  },
+  "tools": {
+    "access_upload": "Accedi al portfolio"
+  }
+}

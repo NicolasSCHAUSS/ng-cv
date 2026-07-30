@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Experience } from '../../model/experience';
+import { TranslatePipe } from '../../pipe/translate.pipe';
 
 //Cloud word 
 declare const TagCanvas: any;
 
 @Component({
   selector: 'app-presentation',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './presentation.component.html',
   styleUrl: './presentation.component.css'
 })
@@ -16,7 +16,6 @@ export class PresentationComponent implements AfterViewInit {
   protected subtitle: string
   protected nationality: string
   protected language: string
-  protected timeline: Array<Experience> = []
 
   constructor() {
     this.title = "Développeur full stack"

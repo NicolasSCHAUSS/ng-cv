@@ -2,11 +2,12 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
+import { TranslatePipe } from '../../pipe/translate.pipe';
 
 @Component({
   selector: 'app-price',
   standalone: true,
-  imports: [CommonModule, CardModule, HttpClientModule, CurrencyPipe],
+  imports: [CommonModule, CardModule, HttpClientModule, CurrencyPipe, TranslatePipe],
   templateUrl: './price.component.html',
   styleUrl: './price.component.css',
 })

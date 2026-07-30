@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 import { AccordionModule } from 'primeng/accordion';
 import { DurationPipe } from '../../pipe/duration.pipe';
 import { Divider } from 'primeng/divider';
+import { TranslatePipe } from '../../pipe/translate.pipe';
 
 @Component({
   selector: 'app-experience',
-  imports: [AccordionModule, DurationPipe, Divider],
+  imports: [AccordionModule, DurationPipe, Divider, TranslatePipe],
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.css']
 })

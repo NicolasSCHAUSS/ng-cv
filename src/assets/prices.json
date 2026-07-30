@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Pack Maintenance",
+    "icon": "pi pi-wrench",
+    "description": [
+      "Amélioration de site internet",
+      "Ajout de fonctionnalité",
+      "Dépannage fonctionnel",
+      "Migration"
+    ],
+    "price": 35
+  },
+
+  {
+    "title": "Pack Développement",
+    "icon": "pi pi-code",
+    "description": [
+      "Création de site internet",
+      "Interface utilisateur personalisé",
+      "Compatibilité tout support",
+      "Traduction multi-langue"
+    ],
+    "price": 47.5
+  },
+
+  {
+    "title": "Pack Consultant",
+    "icon": "pi pi-user",
+    "description": [
+      "Analyse technique",
+      "Conseil stratégique",
+      "Audit de code",
+      "Optimisation"
+    ],
+    "price": 60
+  },
+
+  {
+    "title": "Pack Gestion de projet",
+    "icon": "pi pi-calendar",
+    "description": ["Planification", "Suivi", "Communication", "Livraison"],
+    "price": 68.9
+  },
+
+  {
+    "title": "Pack Agile (Hybride)",
+    "icon": "pi pi-refresh",
+    "description": [
+      "Sprints courts (3 semaines)",
+      "Projet établit en incluant les tests utilisateurs",
+      "Adaptation rapide suivant retour utilisateurs",
+      "Livraison continue"
+    ],
+    "price": 47.9
+  }
+]

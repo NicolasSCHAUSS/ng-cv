@@ -2,14 +2,14 @@
   <div
     class="flex border-round pl-5 pr-5 m-3 align-items-center font-semibold grey"
   >
-    <span class="flex w-2 justify-content-center">Entreprise</span>
+    <span class="flex w-2 justify-content-center">{{ 'experience.header.company' | translate }}</span>
     <p-divider layout="vertical" />
     <div class="flex w-7 justify-content-between">
-      <span>Client - Poste</span>
-      <span>Secteur</span>
+      <span>{{ 'experience.header.client_position' | translate }}</span>
+      <span>{{ 'experience.header.sector' | translate }}</span>
     </div>
-    <span class="flex w-3 justify-content-center">Années</span>
-    <span class="flex justify-content-end ml-1">Info</span>
+    <span class="flex w-3 justify-content-center">{{ 'experience.header.years' | translate }}</span>
+    <span class="flex justify-content-end ml-1">{{ 'experience.header.info' | translate }}</span>
   </div>
 </div>
 <div class="experience">
@@ -30,7 +30,7 @@
             @if (experience.end) {
               - {{ experience.end }}
             } @else {
-              - En cours
+              - {{ 'experience.duration.current' | translate }}
             }
           </span>
         </p-accordion-header>
@@ -39,43 +39,43 @@
             <span
               class="flex col-4 align-items-center justify-content-center col-inline"
             >
-              <span class="font-semibold mr-1">Durée :</span>
+              <span class="font-semibold mr-1">{{ 'experience.info.duration' | translate }}</span>
               @if (experience.duration) {
                 {{ experience.duration | duration }}
               } @else {
-                En cours
+                {{ 'experience.duration.current' | translate }}
               }
             </span>
             <span
               class="flex col-4 align-items-center justify-content-center col-inline"
             >
-              <span class="font-semibold mr-1">Equipe :</span>
+              <span class="font-semibold mr-1">{{ 'experience.info.team' | translate }}</span>
               @if (experience.teamSize) {
-                {{ experience.teamSize }} personnes
+                {{ experience.teamSize }} {{ 'experience.duration.people' | translate }}
               } @else {
-                Au besoin
+                {{ 'experience.duration.as_needed' | translate }}
               }
             </span>
             <span
               class="flex col-4 align-items-center justify-content-center info-grid col-inline"
             >
-              <span class="font-semibold mr-1">Gestion :</span>
+              <span class="font-semibold mr-1">{{ 'experience.info.management' | translate }}</span>
               {{ experience.managementType }}
             </span>
             <span
               class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
             >
-              Description :</span
+              {{ 'experience.info.description' | translate }}:</span
             >
             <span
               class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
             >
-              Actions :</span
+              {{ 'experience.info.actions' | translate }}:</span
             >
             <span
               class="flex col-4 align-items-center justify-content-center font-semibold col-padding-bottom"
             >
-              Technologies :</span
+              {{ 'experience.info.technologies' | translate }}:</span
             >
             <span
               class="flex col-4 align-items-start justify-content-center col-padding-top text-justify"

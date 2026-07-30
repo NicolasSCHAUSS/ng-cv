@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { Divider } from 'primeng/divider';
+import { TranslatePipe } from '../../pipe/translate.pipe';
 
 @Component({
   selector: 'app-contact',
-  imports: [Divider, MatTooltipModule],
+  imports: [Divider, MatTooltipModule, TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
