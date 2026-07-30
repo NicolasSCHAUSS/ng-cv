@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenubarModule } from 'primeng/menubar';
 import { MenuItem } from 'primeng/api';
 import { AvatarModule } from 'primeng/avatar';
 import { DividerModule } from 'primeng/divider';
+import { MenubarModule } from 'primeng/menubar';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, MenubarModule, AvatarModule, DividerModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'SCHAUSS Nicolas';
@@ -18,22 +18,27 @@ export class AppComponent {
     {
       label: 'Présentation',
       icon: 'pi pi-user',
-      routerLink: '/'
+      routerLink: '/',
     },
     {
       label: 'Expériences',
       icon: 'pi pi-briefcase',
-      routerLink: '/experience'
+      routerLink: '/experience',
     },
     {
       label: 'Formations',
       icon: 'pi pi-graduation-cap',
-      routerLink: '/formation'
+      routerLink: '/formation',
     },
     {
       label: 'Contact',
       icon: 'pi pi-phone',
-      routerLink: '/contact'
-    }
+      routerLink: '/contact',
+    },
+    {
+      label: 'Prix',
+      icon: 'pi pi-tag',
+      routerLink: '/price',
+    },
   ];
 }

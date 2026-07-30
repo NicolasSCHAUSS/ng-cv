@@ -1,0 +1,23 @@
+<div class="price-grid offset">
+  <p-card *ngFor="let price of prices" class="offer-card">
+    <ng-template pTemplate="header">
+      <div class="card-title">
+        <div class="card-icon">
+          <i [class]="price.icon"></i>
+        </div>
+        {{ price.title }}
+      </div>
+    </ng-template>
+    <ng-template pTemplate="body">
+      <ul>
+        <li *ngFor="let desc of price.description">{{ desc }}</li>
+      </ul>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div class="card-price pb-0">
+        {{ price.price | currency: "EUR" : "symbol" : "2.0-1" }}
+      </div>
+      <div class="card-price pt-0">/Hr</div>
+    </ng-template>
+  </p-card>
+</div>
