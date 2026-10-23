@@ -5,6 +5,7 @@
     "copyright": "© 2025 Nicolas SCHAUSS. All rights reserved."
   },
   "menu": {
+    "language": "Language",
     "presentation": "Presentation",
     "experience": "Experiences",
     "formation": "Education",
@@ -35,12 +36,12 @@
       "info": "Info"
     },
     "info": {
-      "duration": "Duration:",
-      "team": "Team:",
-      "management": "Management:",
-      "description": "Description:",
-      "actions": "Actions:",
-      "technologies": "Technologies:"
+      "duration": "Duration",
+      "team": "Team",
+      "management": "Management",
+      "description": "Description",
+      "actions": "Actions",
+      "technologies": "Technologies"
     },
     "duration": {
       "current": "Ongoing",
@@ -72,7 +73,47 @@
     "source": "Source: Asterix & Obelix - Mission Cleopatra"
   },
   "price": {
-    "per_hour": "/Hr"
+    "per_hour": "/Hr",
+    "pack_maintenance": {
+      "title": "Maintenance Pack",
+      "description": [
+        "Website improvement",
+        "Feature addition",
+        "Functional troubleshooting",
+        "Migration"
+      ]
+    },
+    "pack_development": {
+      "title": "Development Pack",
+      "description": [
+        "Website creation",
+        "Custom user interface",
+        "Cross-platform compatibility",
+        "Multi-language translation"
+      ]
+    },
+    "pack_consultant": {
+      "title": "Consultant Pack",
+      "description": [
+        "Technical analysis",
+        "Strategic consulting",
+        "Code audit",
+        "Optimization"
+      ]
+    },
+    "pack_project_management": {
+      "title": "Project Management Pack",
+      "description": ["Planning", "Tracking", "Communication", "Delivery"]
+    },
+    "pack_agile_hybrid": {
+      "title": "Agile Pack (Hybrid)",
+      "description": [
+        "Short sprints (3 weeks)",
+        "Project established including user tests",
+        "Rapid adaptation based on user feedback",
+        "Continuous delivery"
+      ]
+    }
   },
   "sectors": {
     "following_needs": "As needed",

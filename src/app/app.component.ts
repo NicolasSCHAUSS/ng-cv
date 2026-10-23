@@ -1,41 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { MenuItem } from 'primeng/api';
-import { AvatarModule } from 'primeng/avatar';
-import { DividerModule } from 'primeng/divider';
-import { MenubarModule } from 'primeng/menubar';
-import { TranslationService } from './service/translation.service';
-import { FormsModule } from '@angular/forms';
-import { SelectButtonModule } from 'primeng/selectbutton';
+import { Avatar } from 'primeng/avatar';
+import { Divider } from 'primeng/divider';
+import { DropdownModule } from 'primeng/dropdown';
+import { Menubar } from 'primeng/menubar';
 import { TranslatePipe } from './pipe/translate.pipe';
+import { TranslationService } from './service/translation.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MenubarModule, AvatarModule, DividerModule, FormsModule, SelectButtonModule, TranslatePipe],
+  imports: [
+    RouterOutlet,
+    FormsModule,
+    Menubar,
+    Avatar,
+    Divider,
+    TranslatePipe,
+    DropdownModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'SCHAUSS Nicolas';
-  activeRoute: string = '/';
   items: MenuItem[] = [];
-  locales: any[] = [];
-  selectedLocale: string = 'fr';
+  languages: MenuItem[] = [];
+  selectedLanguage: MenuItem = {
+    label: 'Français',
+    image: 'assets/flags/fr.png',
+    locale: 'fr',
+  };
 
   constructor(private translationService: TranslationService) {}
 
   ngOnInit(): void {
-    this.translationService.currentLocale$.subscribe(locale => {
-      this.selectedLocale = locale;
+    this.translationService.currentLocale$.subscribe((locale) => {
       this.updateMenuItems();
+      this.selectedLanguage = this.languages.find(
+        (l) => l['locale'] === locale,
+      ) || {
+        label: 'Français',
+        image: 'assets/flags/fr.png',
+        locale: 'fr',
+      };
     });
-    
-    this.locales = this.translationService.getAvailableLocales().map(locale => ({
-      value: locale,
-      label: this.translationService.getLocaleDisplayName(locale)
-    }));
-    
-    this.updateMenuItems();
   }
 
   changeLanguage(locale: string): void {
@@ -68,6 +78,29 @@ export class AppComponent implements OnInit {
         label: this.translationService.translateSync('menu.price'),
         icon: 'pi pi-tag',
         routerLink: '/price',
+      },
+    ];
+
+    this.languages = [
+      {
+        label: 'Français',
+        image: 'assets/flags/fr.png',
+        locale: 'fr',
+      },
+      {
+        label: 'English',
+        image: 'assets/flags/en.png',
+        locale: 'en',
+      },
+      {
+        label: 'Español',
+        image: 'assets/flags/es.png',
+        locale: 'es',
+      },
+      {
+        label: 'Italiano',
+        image: 'assets/flags/it.png',
+        locale: 'it',
       },
     ];
   }

@@ -1,11 +1,28 @@
 <p-menubar class="fixed top-0 z-5 w-12" [model]="items">
-  <ng-template #start>
-    <p-selectButton [options]="locales" [(ngModel)]="selectedLocale" (onChange)="changeLanguage($event.value)" optionLabel="label" optionValue="value"></p-selectButton>
-  </ng-template>
   <ng-template #end>
-    <div class="flex justify-content-center align-items-center">
-      <span class="grey mr-2">{{ 'app.name' | translate }}</span>
+    <div class="flex justify-content-center align-items-center gap-2">
+      <span class="grey mr-2">{{ "app.name" | translate }}</span>
       <p-avatar image="assets/nschauss-cv.png" shape="circle" />
+      <p-dropdown
+        [options]="languages"
+        [(ngModel)]="selectedLanguage"
+        (onChange)="changeLanguage(selectedLanguage['locale'])"
+        [tabindex]="0"
+        class="w-3"
+        appendTo="body"
+      >
+        <ng-template let-item pTemplate="item">
+          <div class="flex align-items-center">
+            <img [src]="item.image" style="width: 20px" class="mr-2" />
+            <span>{{ item.label }}</span>
+          </div>
+        </ng-template>
+        <ng-template let-default pTemplate="selectedItem">
+          <div class="flex align-items-center">
+            <img [src]="default.image" style="width: 20px" />
+          </div>
+        </ng-template>
+      </p-dropdown>
     </div>
   </ng-template>
 </p-menubar>
@@ -29,6 +46,6 @@
     ></a>
   </div>
   <p class="text-300 font-italic text-xs">
-    {{ 'app.copyright' | translate }}
+    {{ "app.copyright" | translate }}
   </p>
 </footer>

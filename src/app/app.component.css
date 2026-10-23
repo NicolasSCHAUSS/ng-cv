@@ -27,3 +27,7 @@ footer {
     position: relative;
     top: 3rem;
 }
+
+::ng-deep .p-select-overlay {
+    left: -26.6% !important
+}

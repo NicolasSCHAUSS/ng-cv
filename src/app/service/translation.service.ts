@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, map, catchError, of } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, catchError, map, of } from 'rxjs';
 
 export type Locale = 'fr' | 'en' | 'es' | 'it';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslationService {
   private translations: { [key: string]: any } = {};
@@ -16,17 +16,22 @@ export class TranslationService {
   currentLocale$: Observable<Locale> = this.currentLocaleSubject.asObservable();
 
   constructor(private http: HttpClient) {
+    this.getLocale();
     this.loadTranslations();
   }
 
   private loadTranslations(): void {
-    this.LOCALES.forEach(locale => {
-      this.http.get(`${this.TRANSLATION_PATH}${locale}.json`)
-        .pipe(
-          catchError(() => of({}))
-        )
-        .subscribe(translations => {
+    let loadedCount = 0;
+    this.LOCALES.forEach((locale) => {
+      this.http
+        .get(`${this.TRANSLATION_PATH}${locale}.json`)
+        .pipe(catchError(() => of({})))
+        .subscribe((translations) => {
           this.translations[locale] = translations;
+          loadedCount++;
+          if (loadedCount === this.LOCALES.length) {
+            this.currentLocaleSubject.next(this.currentLocaleSubject.value);
+          }
         });
     });
   }
@@ -41,17 +46,23 @@ export class TranslationService {
     return this.currentLocaleSubject.value;
   }
 
-  translate(key: string, params?: { [key: string]: string }): Observable<string> {
+  translate(
+    key: string,
+    params?: { [key: string]: string },
+  ): Observable<string> {
     return this.currentLocale$.pipe(
-      map(locale => {
+      map((locale) => {
         let translation = this.getTranslation(locale, key);
         if (params) {
-          Object.keys(params).forEach(paramKey => {
-            translation = translation.replace(`{{${paramKey}}}`, params[paramKey]);
+          Object.keys(params).forEach((paramKey) => {
+            translation = translation.replace(
+              `{{${paramKey}}}`,
+              params[paramKey],
+            );
           });
         }
         return translation || key;
-      })
+      }),
     );
   }
 
@@ -59,7 +70,7 @@ export class TranslationService {
     const locale = this.getLocale();
     let translation = this.getTranslation(locale, key);
     if (params) {
-      Object.keys(params).forEach(paramKey => {
+      Object.keys(params).forEach((paramKey) => {
         translation = translation.replace(`{{${paramKey}}}`, params[paramKey]);
       });
     }
@@ -69,7 +80,7 @@ export class TranslationService {
   private getTranslation(locale: Locale, key: string): string {
     const keys = key.split('.');
     let translation: any = this.translations[locale];
-    
+
     for (const k of keys) {
       if (translation && translation.hasOwnProperty(k)) {
         translation = translation[k];
@@ -77,7 +88,7 @@ export class TranslationService {
         return key;
       }
     }
-    
+
     return translation || key;
   }
 
@@ -90,7 +101,7 @@ export class TranslationService {
       fr: 'Français',
       en: 'English',
       es: 'Español',
-      it: 'Italiano'
+      it: 'Italiano',
     };
     return displayNames[locale] || locale;
   }

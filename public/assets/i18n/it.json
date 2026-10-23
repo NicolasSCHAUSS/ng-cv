@@ -5,6 +5,7 @@
     "copyright": "© 2025 Nicolas SCHAUSS. Tutti i diritti riservati."
   },
   "menu": {
+    "language": "Lingua",
     "presentation": "Presentazione",
     "experience": "Esperienze",
     "formation": "Formazione",
@@ -35,12 +36,12 @@
       "info": "Info"
     },
     "info": {
-      "duration": "Durata:",
-      "team": "Team:",
-      "management": "Gestione:",
-      "description": "Descrizione:",
-      "actions": "Azioni:",
-      "technologies": "Tecnologie:"
+      "duration": "Durata",
+      "team": "Team",
+      "management": "Gestione",
+      "description": "Descrizione",
+      "actions": "Azioni",
+      "technologies": "Tecnologie"
     },
     "duration": {
       "current": "In corso",
@@ -72,7 +73,52 @@
     "source": "Fonte: Asterix e Obelix - Missione Cleopatra"
   },
   "price": {
-    "per_hour": "/Ora"
+    "per_hour": "/Ora",
+    "pack_maintenance": {
+      "title": "Pack Manutenzione",
+      "description": [
+        "Miglioramento sito web",
+        "Aggiunta di funzionalità",
+        "Risoluzione problemi funzionali",
+        "Migrazione"
+      ]
+    },
+    "pack_development": {
+      "title": "Pack Sviluppo",
+      "description": [
+        "Creazione sito web",
+        "Interfaccia utente personalizzata",
+        "Compatibilità multipiattaforma",
+        "Traduzione multilingua"
+      ]
+    },
+    "pack_consultant": {
+      "title": "Pack Consulente",
+      "description": [
+        "Analisi tecnica",
+        "Consulenza strategica",
+        "Audit del codice",
+        "Ottimizzazione"
+      ]
+    },
+    "pack_project_management": {
+      "title": "Pack Gestione Progetto",
+      "description": [
+        "Pianificazione",
+        "Monitoraggio",
+        "Comunicazione",
+        "Consegna"
+      ]
+    },
+    "pack_agile_hybrid": {
+      "title": "Pack Agile (Ibrido)",
+      "description": [
+        "Sprint brevi (3 settimane)",
+        "Progetto stabilito includendo test utente",
+        "Adattamento rapido in base al feedback utente",
+        "Consegna continua"
+      ]
+    }
   },
   "sectors": {
     "following_needs": "Secondo necessità",

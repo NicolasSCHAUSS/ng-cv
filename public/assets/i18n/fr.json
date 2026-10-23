@@ -5,6 +5,7 @@
     "copyright": "© 2025 Nicolas SCHAUSS. Tous droits réservés."
   },
   "menu": {
+    "language": "Langue",
     "presentation": "Présentation",
     "experience": "Expériences",
     "formation": "Formations",
@@ -35,12 +36,12 @@
       "info": "Info"
     },
     "info": {
-      "duration": "Durée :",
-      "team": "Equipe :",
-      "management": "Gestion :",
-      "description": "Description :",
-      "actions": "Actions :",
-      "technologies": "Technologies :"
+      "duration": "Durée",
+      "team": "Equipe",
+      "management": "Gestion",
+      "description": "Description",
+      "actions": "Actions",
+      "technologies": "Technologies"
     },
     "duration": {
       "current": "En cours",
@@ -72,7 +73,47 @@
     "source": "Source: Asterix et Obélix - Mission Cléopatre"
   },
   "price": {
-    "per_hour": "/Hr"
+    "per_hour": "/Hr",
+    "pack_maintenance": {
+      "title": "Pack Maintenance",
+      "description": [
+        "Amélioration de site internet",
+        "Ajout de fonctionnalité",
+        "Dépannage fonctionnel",
+        "Migration"
+      ]
+    },
+    "pack_development": {
+      "title": "Pack Développement",
+      "description": [
+        "Création de site internet",
+        "Interface utilisateur personalisé",
+        "Compatibilité tout support",
+        "Traduction multi-langue"
+      ]
+    },
+    "pack_consultant": {
+      "title": "Pack Consultant",
+      "description": [
+        "Analyse technique",
+        "Conseil stratégique",
+        "Audit de code",
+        "Optimisation"
+      ]
+    },
+    "pack_project_management": {
+      "title": "Pack Gestion de projet",
+      "description": ["Planification", "Suivi", "Communication", "Livraison"]
+    },
+    "pack_agile_hybrid": {
+      "title": "Pack Agile (Hybride)",
+      "description": [
+        "Sprints courts (3 semaines)",
+        "Projet établit en incluant les tests utilisateurs",
+        "Adaptation rapide suivant retour utilisateurs",
+        "Livraison continue"
+      ]
+    }
   },
   "sectors": {
     "following_needs": "Suivant besoin",
