@@ -14,6 +14,17 @@ import { TranslationService } from '../../service/translation.service';
 export class PriceComponent implements OnInit {
   prices: any[] = [
     {
+      icon: 'pi pi-clipboard',
+      titleKey: 'price.pack_invoice.title',
+      descriptionKeys: [
+        'price.pack_invoice.description.0',
+        'price.pack_invoice.description.1',
+        'price.pack_invoice.description.2',
+        'price.pack_invoice.description.3',
+      ],
+      price: 0,
+    },
+    {
       icon: 'pi pi-wrench',
       titleKey: 'price.pack_maintenance.title',
       descriptionKeys: [

@@ -17,9 +17,15 @@
     </ng-template>
     <ng-template pTemplate="footer">
       <div class="card-price pb-0">
-        {{ price.price | currency: "EUR" : "symbol" : "2.0-1" }}
+        {{
+          price.price === 0
+            ? ("price.free" | translate)
+            : (price.price | currency: "EUR" : "symbol" : "2.0-1")
+        }}
       </div>
-      <div class="card-price pt-0">{{ "price.per_hour" | translate }}</div>
+      <div *ngIf="price.price !== 0" class="card-price pt-0">
+        {{ "price.per_hour" | translate }}
+      </div>
     </ng-template>
   </p-card>
 </div>

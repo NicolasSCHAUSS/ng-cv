@@ -74,6 +74,17 @@
   },
   "price": {
     "per_hour": "/Hr",
+    "free": "Offert",
+    "pack_invoice": {
+      "title": "Pack Devis",
+      "description": [
+        "Évaluation technique détaillée",
+        "Estimation précise des coûts",
+        "Spécification fonctionnelle",
+        "Maquettage (Figma)"
+      ],
+      "price": 0
+    },
     "pack_maintenance": {
       "title": "Pack Maintenance",
       "description": [
